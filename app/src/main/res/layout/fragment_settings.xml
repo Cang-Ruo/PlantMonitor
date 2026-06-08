@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+        
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="@color/card_background">
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+                
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="设备角色"
+                    android:textColor="@color/text_dark"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:drawableStart="@drawable/ic_device"
+                    android:drawablePadding="8dp" />
+                
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="选择设备角色以启用相应功能："
+                    android:textColor="@color/text_gray"
+                    android:textSize="14sp" />
+                
+                <RadioGroup
+                    android:id="@+id/rgDeviceRole"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp">
+                    
+                    <RadioButton
+                        android:id="@+id/rbMonitor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="监控端 (WiFi)"
+                        android:textColor="@color/text_gray"
+                        android:buttonTint="@color/primary" />
+                    
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
+                        android:text="功能：拍照识别、自动定时拍照、接收远程指令"
+                        android:textColor="@color/text_light"
+                        android:textSize="12sp" />
+                    
+                    <RadioButton
+                        android:id="@+id/rbController"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="控制端 (4G)"
+                        android:textColor="@color/text_gray"
+                        android:buttonTint="@color/primary" />
+                    
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
+                        android:text="功能：远程拍照控制、设备控制、查看监控端数据"
+                        android:textColor="@color/text_light"
+                        android:textSize="12sp" />
+                
+                </RadioGroup>
+                
+                <TextView
+                    android:id="@+id/tvCurrentRole"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="当前角色：监控端"
+                    android:textColor="@color/primary"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+                
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="提示：切换角色后需要重启应用才能生效"
+                    android:textColor="@color/text_light"
+                    android:textSize="12sp" />
+            
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="@color/card_background">
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+                
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_capture_interval"
+                    android:textColor="@color/text_dark"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:drawableStart="@drawable/ic_timer"
+                    android:drawablePadding="8dp" />
+                
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="快速选择："
+                    android:textColor="@color/text_gray"
+                    android:textSize="14sp" />
+                
+                <RadioGroup
+                    android:id="@+id/rgCaptureInterval"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp">
+                    
+                    <RadioButton
+                        android:id="@+id/rb5Min"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/interval_5min"
+                        android:textColor="@color/text_gray"
+                        android:buttonTint="@color/primary" />
+                    
+                    <RadioButton
+                        android:id="@+id/rb15Min"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/interval_15min"
+                        android:textColor="@color/text_gray"
+                        android:buttonTint="@color/primary" />
+                    
+                    <RadioButton
+                        android:id="@+id/rb30Min"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/interval_30min"
+                        android:textColor="@color/text_gray"
+                        android:buttonTint="@color/primary" />
+                    
+                    <RadioButton
+                        android:id="@+id/rb1Hour"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/interval_1hour"
+                        android:textColor="@color/text_gray"
+                        android:buttonTint="@color/primary" />
+                
+                </RadioGroup>
+                
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="@color/divider" />
+                
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="自定义间隔（用于答辩演示）："
+                    android:textColor="@color/text_gray"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+                    
+                    <EditText
+                        android:id="@+id/etCustomInterval"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/bg_input"
+                        android:inputType="number"
+                        android:padding="12dp"
+                        android:textSize="14sp"
+                        android:textColor="@color/text_dark"
+                        android:textColorHint="@color/text_hint"
+                        android:hint="输入数值" />
+                    
+                    <Spinner
+                        android:id="@+id/spinnerIntervalUnit"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/bg_input"
+                        android:padding="8dp"
+                        android:textSize="14sp" />
+                    
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnSetCustomInterval"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:text="设置"
+                        app:cornerRadius="24dp"
+                        style="@style/Widget.MaterialComponents.Button" />
+                
+                </LinearLayout>
+                
+                <TextView
+                    android:id="@+id/tvCurrentInterval"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="当前间隔：15 分钟"
+                    android:textColor="@color/primary"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="@color/card_background">
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+                
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/server_settings"
+                    android:textColor="@color/text_dark"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:drawableStart="@drawable/ic_settings"
+                    android:drawablePadding="8dp" />
+                
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/device_ip"
+                    android:textColor="@color/text_gray"
+                    android:textSize="14sp" />
+                
+                <EditText
+                    android:id="@+id/etDeviceIp"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/bg_input"
+                    android:inputType="text"
+                    android:padding="12dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/text_dark"
+                    android:textColorHint="@color/text_hint" />
+                
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/device_port"
+                    android:textColor="@color/text_gray"
+                    android:textSize="14sp" />
+                
+                <EditText
+                    android:id="@+id/etDevicePort"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/bg_input"
+                    android:inputType="number"
+                    android:padding="12dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/text_dark"
+                    android:textColorHint="@color/text_hint" />
+            
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="@color/card_background">
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+                
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/other_settings"
+                    android:textColor="@color/text_dark"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:drawableStart="@drawable/ic_more"
+                    android:drawablePadding="8dp" />
+                
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnControlHistory"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/control_history"
+                    app:cornerRadius="24dp"
+                    app:strokeColor="@color/primary"
+                    android:textColor="@color/primary"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+                
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnClearCache"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/clear_cache"
+                    app:cornerRadius="24dp"
+                    app:strokeColor="@color/primary"
+                    android:textColor="@color/primary"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+            
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

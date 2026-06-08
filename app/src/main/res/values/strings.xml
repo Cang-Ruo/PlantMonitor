@@ -1,0 +1,83 @@
+<resources>
+    <string name="app_name">植物监测系统</string>
+    
+    <string name="title_monitor">监测</string>
+    <string name="title_analysis">分析</string>
+    <string name="title_control">控制</string>
+    <string name="title_settings">设置</string>
+    
+    <string name="capture_photo">拍照</string>
+    <string name="auto_capture">定时拍照</string>
+    <string name="capture_interval">拍照间隔</string>
+    <string name="last_capture">上次拍照</string>
+    <string name="camera_preview">相机预览</string>
+    
+    <string name="plant_name">植物名称</string>
+    <string name="health_status">健康状态</string>
+    <string name="confidence">置信度</string>
+    <string name="disease_info">病虫害信息</string>
+    <string name="suggestion">建议</string>
+    <string name="user_input_hint">输入您的问题或需求…</string>
+    <string name="get_suggestion">获取建议</string>
+    <string name="history_records">历史记录</string>
+    <string name="no_analysis_result">暂无分析结果</string>
+    
+    <string name="light">补光灯</string>
+    <string name="humidifier">加湿器</string>
+    <string name="pump">水泵</string>
+    <string name="fan">风扇</string>
+    
+    <string name="device_status">设备状态</string>
+    <string name="status_online">在线</string>
+    <string name="status_offline">离线</string>
+    <string name="status_executing">执行中</string>
+    <string name="command_sent">已发送</string>
+    <string name="command_failed">发送失败</string>
+    <string name="retry">重试</string>
+    
+    <string name="settings_capture_interval">拍照间隔设置</string>
+    <string name="interval_5min">5 分钟</string>
+    <string name="interval_15min">15 分钟</string>
+    <string name="interval_30min">30 分钟</string>
+    <string name="interval_1hour">1 小时</string>
+    <string name="custom_interval_hint">自定义间隔（答辩演示）</string>
+    <string name="interval_unit_seconds">秒</string>
+    <string name="interval_unit_minutes">分钟</string>
+    <string name="btn_set_interval">设置</string>
+    <string name="current_interval_display">当前间隔：%1$d %2$s</string>
+    
+    <string name="server_settings">服务器设置</string>
+    <string name="server_address">服务器地址</string>
+    <string name="device_ip">设备 IP</string>
+    <string name="device_port">设备端口</string>
+    
+    <string name="ai_settings">AI 服务设置</string>
+    <string name="api_key">API Key</string>
+    <string name="secret_key">Secret Key</string>
+    
+    <string name="other_settings">其他设置</string>
+    <string name="clear_cache">清理缓存</string>
+    <string name="control_history">控制历史</string>
+    
+    <string name="permission_camera_required">需要相机权限才能拍照</string>
+    <string name="permission_denied">权限被拒绝</string>
+    <string name="network_error">网络错误</string>
+    <string name="uploading">上传中…</string>
+    <string name="analyzing">分析中…</string>
+    <string name="capture_success">拍照成功</string>
+    <string name="capture_failed">拍照失败</string>
+    <string name="no_network">无网络连接</string>
+    
+    <string name="healthy">健康</string>
+    <string name="unhealthy">异常</string>
+    <string name="unknown">未知</string>
+    
+    <string name="minutes">分钟</string>
+    <string name="seconds">秒</string>
+    
+    <string name="confirm">确定</string>
+    <string name="cancel">取消</string>
+    <string name="save">保存</string>
+    
+    <string name="cache_cleared">缓存已清理</string>
+</resources>

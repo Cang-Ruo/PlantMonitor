@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <item
+        android:id="@+id/navigation_monitor"
+        android:icon="@drawable/ic_monitor"
+        android:title="@string/title_monitor" />
+        
+    <item
+        android:id="@+id/navigation_analysis"
+        android:icon="@drawable/ic_analysis"
+        android:title="@string/title_analysis" />
+        
+    <item
+        android:id="@+id/navigation_chat"
+        android:icon="@drawable/ic_chat"
+        android:title="小植" />
+        
+    <item
+        android:id="@+id/navigation_control"
+        android:icon="@drawable/ic_control"
+        android:title="@string/title_control" />
+        
+    <item
+        android:id="@+id/navigation_settings"
+        android:icon="@drawable/ic_settings"
+        android:title="@string/title_settings" />
+        
+</menu>
